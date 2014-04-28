@@ -1,9 +1,9 @@
 ﻿namespace Servant.Business.Objects.Enums
 {
-    public enum SiteStartResult
-    {
-        Started,
-        BindingIsAlreadyInUse,
-        CannotAccessSitePath
-    }
+	public enum SiteStartResult
+	{
+		Started,
+		BindingIsAlreadyInUse,
+		CannotAccessSitePath
+	}
 }
