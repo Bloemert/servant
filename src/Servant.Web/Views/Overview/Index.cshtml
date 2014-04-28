@@ -1,0 +1,31 @@
+﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<dynamic>
+@{
+    Layout = "Shared/_Layout.cshtml";
+    ViewBag.ActiveMenuItem = "overview";
+}
+
+
+<h2 class="bind"><img src="~/Images/overview.png" />Overzicht Bindings</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Site</th>
+            <th>Bindings</th>
+        </tr>
+    </thead>
+    @foreach (var site in Model.Page.Sites)
+    {
+        <tr>
+            <td class="overview"><a href="/overview/@site.IisId/settings/">@site.Name</a></td>
+            <td></td>
+        </tr> 
+            foreach (var binding in site.Bindings)
+            {
+                 <tr>
+                     <td></td>
+                     <td>@binding.UserInput</td>
+                 </tr>
+            }
+    }
+</table>
+

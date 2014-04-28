@@ -80,6 +80,10 @@ table {
         background-color: #efefef;
     }
 
+td.overview {font-size: 14px;font-weight: bold;}
+    td.overview a {
+        text-decoration: none;
+    }
 input[type=text], input[type=password] {
     border: 3px solid #a5a5a5;
     padding: 6px 5px 6px;
@@ -315,6 +319,12 @@ pre {
     background-color: #00bcf2;
 }
 
+#sidemenu ul.active-overview li.overview,
+#sidemenu ul li.overview:hover,
+#sidemenu ul li.overview.active {
+    background-color: #ff0039;
+}
+
 #sidemenu ul.active-sites li.sites,
 #sidemenu ul li.sites:hover,
 #sidemenu ul li.sites.active,
@@ -447,6 +457,14 @@ h2.bug {
         margin-right: 10px;
     }
 
+h2.bind {
+    background-color: #ff0039;
+    padding-left: 15px;
+}
+
+    h2.bind span {
+        margin-right: 200px;
+    }
 
 .input-group {
     padding-bottom: 15px;
@@ -606,21 +624,23 @@ table#entries {
     background-repeat: no-repeat;
     float: left;
     display: inline-block;
+   
 }
 
 .sprite-menu-icon-home{background-position: -8px 0px; width: 32px; height: 32px; }
 .sprite-menu-icon-sites{background-position: -8px -42px; width: 32px; height: 32px; }
 .sprite-menu-icon-settings{background-position: -8px -84px; width: 32px; height: 32px; }
-.sprite-icon-ok{background-position: -8px -126px; width: 32px; height: 32px; }
-.sprite-icon-bug{background-position: -8px -168px; width: 32px; height: 32px; }
-.sprite-icon-delete{background-position: -8px -210px; width: 32px; height: 32px; }
-.sprite-icon-recycle{background-position: -8px -252px; width: 32px; height: 32px; }
-.sprite-icon-restart{background-position: -8px -294px; width: 32px; height: 32px; }
-.sprite-icon-stack{background-position: 0px -336px; width: 48px; height: 48px; }
-.sprite-icon-cancel{background-position: -8px -394px; width: 32px; height: 32px; }
-.sprite-icon-arrow-down{background-position: -16px -436px; width: 16px; height: 16px; }
-.sprite-Media-Play{background-position: -8px -462px; width: 32px; height: 32px; }
-.sprite-Stop{background-position: -8px -504px; width: 32px; height: 32px; }
-.sprite-Add{background-position: -12px -546px; width: 24px; height: 24px; }
-.sprite-Delete{background-position: -12px -580px; width: 24px; height: 24px; }
-.sprite-small-add{background-position: -16px -614px; width: 16px; height: 16px; }
+.sprite-menu-icon-overview {background-image: url("/images/overview.png"); background-position: -8px -126px; width: 32px; height: 32px;}
+.sprite-icon-ok{background-position: -8px -168px; width: 32px; height: 32px; }
+.sprite-icon-bug{background-position: -8px -210px; width: 32px; height: 32px; }
+.sprite-icon-delete{background-position: -8px -252px; width: 32px; height: 32px; }
+.sprite-icon-recycle{background-position: -8px -294px; width: 32px; height: 32px; }
+.sprite-icon-restart{background-position: -8px -336px; width: 32px; height: 32px; }
+.sprite-icon-stack{background-position: 0px -394px; width: 48px; height: 48px; }
+.sprite-icon-cancel{background-position: -8px -436px; width: 32px; height: 32px; }
+.sprite-icon-arrow-down{background-position: -16px -462px; width: 16px; height: 16px; }
+.sprite-Media-Play{background-position: -8px -504px; width: 32px; height: 32px; }
+.sprite-Stop{background-position: -8px -546px; width: 32px; height: 32px; }
+.sprite-Add{background-position: -12px -580px; width: 24px; height: 24px; }
+.sprite-Delete{background-position: -12px -614px; width: 24px; height: 24px; }
+.sprite-small-add{background-position: -16px -648px; width: 16px; height: 16px; }

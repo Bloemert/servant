@@ -81,6 +81,7 @@
     <Content Include="Images\favicon.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\overview.png" />
     <Content Include="Images\servant.png" />
     <Content Include="Images\servant_logo.gif" />
     <Content Include="Images\textbox-submit-search.png" />
@@ -112,6 +113,7 @@
     <Compile Include="Modules\ApiModule.cs" />
     <Compile Include="Modules\BaseModule.cs" />
     <Compile Include="Modules\HomeModule.cs" />
+    <Compile Include="Modules\OverviewModule.cs" />
     <Compile Include="Modules\SettingsModule.cs" />
     <Compile Include="Modules\SetupModule.cs" />
     <Compile Include="Modules\SitesModule.cs" />
@@ -147,6 +149,7 @@
     <EmbeddedResource Include="Views\Sites\Applications.cshtml" />
     <EmbeddedResource Include="Views\Settings\_Layout.cshtml" />
     <EmbeddedResource Include="Views\Settings\Index.cshtml" />
+    <EmbeddedResource Include="Views\Overview\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -160,6 +163,7 @@
       <Name>Servant.Business</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

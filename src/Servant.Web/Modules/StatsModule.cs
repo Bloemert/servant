@@ -1,31 +1,29 @@
-﻿using Nancy;
+﻿using System.Linq;
+using Nancy;
 using Servant.Web.Helpers;
 
 namespace Servant.Web.Modules
 {
-	public class StatsModule : BaseModule
-	{
-		public StatsModule()
-			: base("/stats/")
-		{
-			Get["/cleanupapplicationpools/"] = p =>
-			{
-				Model.UnusedApplicationPools = ApplicationPoolHelper.GetUnusedApplicationPools();
-				return View["CleanupApplicationPools", Model];
-			};
+    public class StatsModule: BaseModule
+    {
+        public StatsModule() : base("/stats/")
+        {
+            Get["/cleanupapplicationpools/"] = p => {
+                Model.UnusedApplicationPools = ApplicationPoolHelper.GetUnusedApplicationPools();
+                return View["CleanupApplicationPools", Model];
+            };
 
-			Post["/cleanupapplicationpools/"] = p =>
-			{
-				var applicationPools = Request.Form.ApplicationPools.ToString().Split(',');
+            Post["/cleanupapplicationpools/"] = p => {
+                var applicationPools = Request.Form.ApplicationPools.ToString().Split(',');
 
-				foreach (var applicationPool in applicationPools)
-				{
-					ApplicationPoolHelper.Delete(applicationPool);
-				}
+                foreach(var applicationPool in applicationPools)
+                {
+                    ApplicationPoolHelper.Delete(applicationPool);
+                }
 
-				return Response.AsRedirect("/stats/");
-			};
+                return Response.AsRedirect("/stats/");
+            };
 
-		}
-	}
+        }
+    }
 }
